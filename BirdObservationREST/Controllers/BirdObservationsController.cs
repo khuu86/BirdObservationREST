@@ -20,9 +20,13 @@ namespace BirdObservationREST.Controllers
         // Henter alle birdobservations
         [ProducesResponseType(StatusCodes.Status200OK)]
         [HttpGet]
-        public ActionResult<IEnumerable<BirdObservation>> GetAll()
+        public ActionResult<IEnumerable<BirdObservation>> GetAll([FromQuery] int? howMany = null, [FromQuery] string? species = null)
         {
-            IEnumerable<BirdObservation> birdObservations = _birdObservationsRepository.GetAll();
+            IEnumerable<BirdObservation> birdObservations = _birdObservationsRepository.GetAll(howMany, species);
+            if (birdObservations == null)
+            {
+                return NotFound();
+            }
             return Ok(birdObservations);
         }
 
