@@ -30,6 +30,10 @@ namespace BirdObservationREST.Controllers
             return Ok(birdObservations);
         }
 
+                                            // HUSK OG PUBLISH TIL AZURE SÅ DEN VIRKER I HTML DELEN //
+                                            // HUSK OG PUBLISH TIL AZURE SÅ DEN VIRKER I HTML DELEN //
+                                            // HUSK OG PUBLISH TIL AZURE SÅ DEN VIRKER I HTML DELEN //
+
         // Get api/birdobservations/{id}
         // Henter en birdobservation ud fra id
         [ProducesResponseType(StatusCodes.Status200OK)]
